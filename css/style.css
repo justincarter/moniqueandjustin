@@ -341,6 +341,7 @@ height: 500px;
 	}
 	.nav a {
 		padding: 0.5em;
+		font-size: 85%;
 	}
 
 	.nav a::after {
