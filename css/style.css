@@ -1,0 +1,368 @@
+@font-face {
+    font-family: 'Metroliner';
+    src: url('fonts/metroliner_regular-webfont.eot');
+    src: url('fonts/metroliner_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/metroliner_regular-webfont.woff') format('woff'),
+         url('fonts/metroliner_regular-webfont.svg#metrolinerregular') format('svg'),
+         url('fonts/metroliner_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Acknowledgement';
+    src: url('fonts/acknowledgement-webfont.eot');
+    src: url('fonts/acknowledgement-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/acknowledgement-webfont.woff') format('woff'),
+         url('fonts/acknowledgement-webfont.svg#acknowledgementmedium') format('svg'),
+         url('fonts/acknowledgement-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+	gold:#b59759
+	red: #a11313
+*/
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 14px;
+	color: #323232;
+
+}
+
+
+h1 {
+	font-family: Metroliner;
+}
+h2 {
+	font-family: Acknowledgement;
+	font-size: 250%;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+h3 {
+	font-size: 160%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+
+.header {
+	background: #323232 url(images/chalkboard-bg.jpg) 50% 50% no-repeat;
+	background-size: auto auto;
+}
+
+.header h1 {
+	margin: 0;
+	padding: 0.2em;
+	color: #cdcdcd;
+	font-size: 1000%;
+	font-weight: normal;
+	text-align: center;
+	-webkit-mix-blend-mode: overlay;
+	mix-blend-mode: overlay;
+	line-height: 1.06;
+
+}
+.header h1 span {
+	display: block;
+	font-family: Acknowledgement;
+	font-size: 25%;
+	line-height: 0.4;
+	letter-spacing: 5px;
+
+}
+.header h1 span.spacer {
+	line-height: 1.5;
+	margin-bottom: -2em;
+}
+.header h1 em {
+	font-size: 40%;
+	font-style: normal;
+	line-height: 0.4;
+
+}
+
+
+.nav {
+	background: #b59759;
+	text-align: center;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	letter-spacing: -0.25em;
+}
+.nav li {
+	display: inline-block;
+}
+.nav a {
+	display: inline-block;
+	padding: 1em;
+	color: #fff;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 120%;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: normal;
+}
+.nav a:hover {
+	text-decoration: underline;
+}
+
+.nav a::after {
+	display: inline-block;
+	content: "";
+	position: relative;
+	width: 0;
+	right: -1em;
+	top: 0.1em;
+	height: 1em;
+	border-right: 1px solid #fff;
+	opacity: 0.5;
+}
+.nav li:last-child a::after {
+	display: none
+}
+
+
+.countdown {
+	height: 200px;
+}
+
+.countdown h2 {
+	color: #b59759;
+}
+
+.pics {
+	background: #b59759 url(images/gold-bg.jpg) 50% 50% repeat-x;
+	text-align: center;
+}
+
+.pics img {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 1.3em solid #323232;
+	border: 1.3em solid rgba(0, 0, 0, 0.8);
+	margin: 2%;
+	max-width: 25%;
+	height: auto;
+	max-height: 240px;
+}
+
+
+.timeline {
+	text-align: center;
+	margin: 0 0 1em 0;
+}
+
+.timeline h2 {
+	color: #b59759;
+	margin-bottom: 0.6em;
+}
+
+.timeline h3 {
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	padding: 0.4em 0.8em;
+	margin: 0;
+
+}
+
+
+.timeline ol {
+	position: relative;
+	list-style: none;
+	margin: 0 0 0 50%;
+	padding: 1.5em 0 1em 0;
+	text-align: left;
+	border-left: 2px solid #000;
+}
+.timeline ol::before {
+}
+.timeline ol li {
+	list-style: none;
+	margin: 0 0 1.5em 2.5em;
+	padding: 0;
+	font-size: 120%;
+}
+
+.timeline ol li::before {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 18px;
+	height: 18px;
+	background: transparent url(images/timeline-heart.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	left: -10px;
+	margin-top: 1em;
+	z-index: 1;
+}
+
+.timeline ol strong {
+	display: block;
+}
+
+.timeline ol li strong::before {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 3.6em;
+	height: 4em;
+	background: transparent url(images/icon-1.png) 0 50% no-repeat;
+	background-size: 100% auto;
+	left: -6em;
+	margin-top: -10px;
+}
+
+.timeline ol:nth-of-type(1) li:nth-of-type(1) strong::before { background-image: url(images/icon-1.png); }
+.timeline ol:nth-of-type(2) li:nth-of-type(1) strong::before { background-image: url(images/icon-2.png); }
+.timeline ol:nth-of-type(2) li:nth-of-type(2) strong::before { background-image: url(images/icon-3.png); }
+.timeline ol:nth-of-type(2) li:nth-of-type(3) strong::before { background-image: url(images/icon-4.png); }
+.timeline ol:nth-of-type(2) li:nth-of-type(4) strong::before { background-image: url(images/icon-5.png); }
+.timeline ol:nth-of-type(2) li:nth-of-type(5) strong::before { background-image: url(images/icon-6.png); }
+.timeline ol:nth-of-type(3) li:nth-of-type(1) strong::before { background-image: url(images/icon-7.png); }
+
+.timeline ol li strong::after {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 0;
+	width: 3.4em;
+	left: -1.8em;
+	margin-top: 1px;
+	border-bottom: 2px solid #000;
+}
+
+
+.venue {
+	background: #000 url(images/arthouse-bg.jpg) 50% 50% no-repeat;
+	background-size: auto 100%;
+height: 600px;
+}
+
+.venue h2 {
+	color: #fff;
+}
+
+
+.accommodation {
+height: 800px;
+}
+
+.accommodation h2 {
+	color: #a11313;
+}
+
+
+.share {
+	background: #323232 url(images/chalkboard-bg.jpg) 50% 50% no-repeat;
+	background-size: auto auto;
+height: 500px;
+}
+
+.share h2 {
+	color: #cdcdcd;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+
+	h2 {
+		font-size: 200%;
+	}
+
+	.header h1 {
+		font-size: 750%;
+	}
+
+	.nav a {
+		padding: 1em;
+		font-size: 100%;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	h2 {
+		font-size: 150%;
+	}
+
+	.header h1 {
+		font-size: 550%;
+	}
+
+	.nav a {
+		padding: 1em;
+		font-size: 75%;
+	}
+
+}
+
+
+@media (max-width: 560px) {
+
+	h2 {
+		font-size: 120%;
+	}
+
+	.header h1 {
+		font-size: 400%;
+	}
+
+	.nav ul {
+		padding: 0.5em;
+	}
+	.nav li {
+		display: block;
+	}
+	.nav a {
+		padding: 0.5em;
+	}
+
+	.nav a::after {
+		display: none;
+	}
+
+	.pics img {
+		border: 0.8em solid #323232;
+		border: 0.8em solid rgba(0, 0, 0, 0.8);
+	}
+
+	.timeline h3 {
+		margin-left: -38%;
+		font-size: 120%;
+	}
+
+	.timeline ol {
+		margin: 0 0 0 30%;
+	}
+	.timeline ol li {
+		font-size: 95%;
+	}
+
+
+}
