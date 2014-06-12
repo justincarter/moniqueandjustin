@@ -364,5 +364,10 @@ height: 500px;
 		font-size: 95%;
 	}
 
+	.timeline ol li::before {
+		margin-top: 0.8em;
+	}
+
+
 
 }
