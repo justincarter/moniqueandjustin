@@ -335,10 +335,10 @@ height: 800px;
 .share img {
 	display: inline-block;
 	margin: 0 3%;
-	max-width: 25%;
+	max-width: 15%;
 	height: auto;
 	max-height: 140px;	
-	margin-bottom: 2.5em;
+	margin-bottom: 1.5em;
 }
 .share p {
 	font-size: 150%;
