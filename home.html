@@ -34,10 +34,7 @@
 <div class="countdown">
 	<div class="container">
 		<h2>The ceremony begins</h2>
-		<div class="hidden">
-			<h3>Saturday 23rd August 2014 @ 3pm</h3>
-		</div>
-		<div class="clock">
+		<div class="clock" style="display:none">
 			<div class="clock-item">
 				<em id="clock-days">0</em>
 				<span>days</span>
@@ -55,6 +52,9 @@
 				<span>seconds</span>
 			</div>
 		</div>
+		<div class="date">
+			<h3>Saturday 23rd August 2014 @ 3pm</h3>
+		</div>
 	</div>
 </div>
 
@@ -70,7 +70,7 @@
 	<div class="container">
 		<h2>Wedding Timeline</h2>
 		<div class="timeline-vertical">
-			<h3>Friday</h3>
+			<h3>Friday 22nd</h3>
 			<ol>
 				<li>
 					<strong>6:00 PM</strong>
@@ -79,7 +79,7 @@
 					294 Pitt Street (Cnr Pitt &amp; Bathurst St)
 				</li>
 			</ol>
-			<h3>Saturday</h3>
+			<h3>Saturday 23rd</h3>
 			<ol start="2">
 				<li>
 					<strong>3:00 PM</strong>
@@ -106,7 +106,7 @@
 					LET'S PARTY!<br>
 				</li>
 			</ol>
-			<h3>Sunday</h3>
+			<h3>Sunday 24th</h3>
 			<ol start="7">
 				<li>
 					<strong>12:00 PM</strong>
@@ -157,14 +157,21 @@
 		var now = moment();
 
 		if (now.isBefore(ceremony)) {
-
+			updateClock();
 			setInterval(function(){
 				updateClock();
 			}, 1000);
-
+			$(".countdown .clock").css("display", "block");
 		}
 		else {
-			alert("finished");
+			var ceremonyend = moment("2014-08-23T15:30+1000");
+			$(".countdown .clock").css("display", "none");
+			if (now.isBefore(ceremonyend)) {
+				$(".countdown .date").find("h3").text("Now!");
+			}
+			else {
+				$(".countdown .date").find("h3").text("They're married!");
+			}
 		}
 
 		function updateClock() {
@@ -179,7 +186,6 @@
 			$("#clock-minutes").text(minutes);
 			$("#clock-seconds").text(seconds);
 		}
-		updateClock();
 
 	});
 </script>
