@@ -3,6 +3,10 @@
 <head>
 	<title>Monique and Justin are getting married!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Monique and Justin are getting married!">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://moniqueandjustin.com">
+	<meta property="og:image" content="http://moniqueandjustin.com/css/images/cover.jpg">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,7 +31,28 @@
 
 <div class="countdown">
 	<div class="container">
-		<h2>The ceremony begins in:</h2>
+		<h2>The ceremony begins</h2>
+		<div class="hidden">
+			<h3>Saturday 23rd August 2014 @ 3pm</h3>
+		</div>
+		<div class="clock">
+			<div class="clock-item">
+				<em id="clock-days">0</em>
+				<span>days</span>
+			</div>
+			<div class="clock-item">
+				<em id="clock-hours">0</em>
+				<span>hours</span>
+			</div>
+			<div class="clock-item">
+				<em id="clock-minutes">0</em>
+				<span>minutes</span>
+			</div>
+			<div class="clock-item">
+				<em id="clock-seconds">0</em>
+				<span>seconds</span>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -94,13 +119,24 @@
 
 <div id="venue" class="venue">
 	<div class="container">
-		<h2>The Arthouse Hotel</h2>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<h2>The Arthouse Hotel</h2>
+				<p>Featuring original architecture dating back to 1836 when it served as The School of Arts, this distinctive building has continuously evolved amid the city's ever-changing fortunes.</p>
+				<p><strong>275 Pitt St, Sydney 2000</strong>
+				(In between Park St &amp; Market St and next door to the Hilton Hotel)</p>
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1656.3359229531495!2d151.20776899999998!3d-33.87234699999983!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3e5d7d67ed%3A0xe04289e7a89b2d48!2sThe+ArtHouse+Hotel!5e0!3m2!1sen!2sau!4v1402803972874" width="100%" height="500" frameborder="0" style="border:0"></iframe>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <div id="accommodation" class="accommodation">
 	<div class="container">
 		<h2>Accommodation</h2>
+		<p>The venue for the wedding is right in the heart of Sydney's CBD so you really have a massive selection of hotels, apartments and even B&amp;B's. Here are some hotels that we can recommend but of course feel free to book wherever suits!</p>
 	</div>
 </div>
 
@@ -110,6 +146,41 @@
 	</div>
 </div>
 
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		var ceremony = moment("2014-08-23T15:00+1000");
+		var now = moment();
+
+		if (now.isBefore(ceremony)) {
+
+			setInterval(function(){
+				updateClock();
+			}, 1000);
+
+		}
+		else {
+			alert("finished");
+		}
+
+		function updateClock() {
+			var ceremony = moment("2014-08-23T15:00+1000");
+			var now = moment();
+			var days = ceremony.diff(now, "days");
+			var hours = ceremony.subtract("days", days).diff(now, "hours");
+			var minutes = ceremony.subtract("hours", hours).diff(now, "minutes");
+			var seconds = ceremony.subtract("minutes", minutes).diff(now, "seconds");
+			$("#clock-days").text(days);
+			$("#clock-hours").text(hours);
+			$("#clock-minutes").text(minutes);
+			$("#clock-seconds").text(seconds);
+		}
+		updateClock();
+
+	});
+</script>
 
 </body>
 </html>

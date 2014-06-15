@@ -47,9 +47,10 @@ h1 {
 h2 {
 	font-family: Acknowledgement;
 	font-size: 250%;
+	margin: 1em 2em;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 5px;
+	letter-spacing: 4px;
 }
 h3 {
 	font-size: 160%;
@@ -140,12 +141,39 @@ h3 {
 
 
 .countdown {
-	height: 200px;
+	text-align: center;
 }
 
 .countdown h2 {
 	color: #b59759;
+	margin-bottom: 0.5em;
 }
+.countdown h3 {
+	margin: 0 0 2em 0;
+	color: #000;
+	font-size: 180%;
+}
+
+.countdown .clock {
+	margin: 0 0 3em 0;
+}
+.countdown .clock-item {
+	display: inline-block;
+	margin: 0 1em;
+	width: 7em;
+}
+.countdown em {
+	font-family: Consolas, Monaco, monospace;
+	font-style: normal;
+	font-size: 600%;
+	line-height: 1;
+}
+.countdown span {
+	display: block;
+	font-size: 120%;
+	padding-top: 0.5em;
+}
+
 
 .pics {
 	background: #b59759 url(images/gold-bg.jpg) 50% 50% repeat-x;
@@ -167,7 +195,7 @@ h3 {
 
 .timeline {
 	text-align: center;
-	margin: 0 0 1em 0;
+	margin: 0 0 2em 0;
 }
 
 .timeline h2 {
@@ -254,11 +282,25 @@ h3 {
 .venue {
 	background: #000 url(images/arthouse-bg.jpg) 50% 50% no-repeat;
 	background-size: auto 100%;
-height: 600px;
 }
 
 .venue h2 {
 	color: #fff;
+}
+
+.venue p {
+	font-size: 120%;
+	text-align: center;
+	color: #c0c0c0;
+}
+.venue strong {
+	display: block;
+	font-size: 140%;
+	color: #fff;
+}
+
+.venue .map {
+	padding: 2em 0 3em 0;
 }
 
 
@@ -269,7 +311,10 @@ height: 800px;
 .accommodation h2 {
 	color: #a11313;
 }
-
+.accommodation p {
+	font-size: 120%;
+	text-align: center;
+}
 
 .share {
 	background: #323232 url(images/chalkboard-bg.jpg) 50% 50% no-repeat;
@@ -346,6 +391,16 @@ height: 500px;
 
 	.nav a::after {
 		display: none;
+	}
+
+	.countdown .clock-item {
+		width: 3.8em;
+	}
+	.countdown em {
+		font-size: 400%;
+	}
+	.countdown span {
+		font-size: 100%;
 	}
 
 	.pics img {
