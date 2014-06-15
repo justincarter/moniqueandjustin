@@ -47,7 +47,7 @@ h1 {
 h2 {
 	font-family: Acknowledgement;
 	font-size: 250%;
-	margin: 1em 2em;
+	margin: 1em 0;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 4px;
@@ -159,10 +159,11 @@ h3 {
 }
 .countdown .clock-item {
 	display: inline-block;
-	margin: 0 1em;
-	width: 7em;
+	width: 8em;
+	margin: 0 0.5em;
 }
 .countdown em {
+	display: block;
 	font-family: Consolas, Monaco, monospace;
 	font-style: normal;
 	font-size: 600%;
@@ -170,8 +171,11 @@ h3 {
 }
 .countdown span {
 	display: block;
-	font-size: 120%;
-	padding-top: 0.5em;
+	font-size: 90%;
+	text-transform: uppercase;
+	padding: 0.25em 0.75em;
+
+	color: #c0c0c0;
 }
 
 
@@ -319,25 +323,37 @@ height: 800px;
 .share {
 	background: #323232 url(images/chalkboard-bg.jpg) 50% 50% no-repeat;
 	background-size: auto auto;
-height: 500px;
+	color: #cdcdcd;
+	text-align: center;
+	padding-bottom: 2em;
 }
 
 .share h2 {
 	color: #cdcdcd;
 }
 
+.share img {
+	display: inline-block;
+	margin: 0 3%;
+	max-width: 25%;
+	height: auto;
+	max-height: 140px;	
+	margin-bottom: 2.5em;
+}
+.share p {
+	font-size: 150%;
+}
+.share strong {
+	display: block;
+	font-size: 180%;
+	color: #fff;
 
-
-
+}
 
 
 
 
 @media (max-width: 992px) {
-
-	h2 {
-		font-size: 200%;
-	}
 
 	.header h1 {
 		font-size: 750%;
@@ -348,13 +364,13 @@ height: 500px;
 		font-size: 100%;
 	}
 
+	h2 {
+		font-size: 200%;
+	}
+
 }
 
 @media (max-width: 768px) {
-
-	h2 {
-		font-size: 150%;
-	}
 
 	.header h1 {
 		font-size: 550%;
@@ -363,6 +379,19 @@ height: 500px;
 	.nav a {
 		padding: 1em;
 		font-size: 75%;
+	}
+
+	h2 {
+		font-size: 160%;
+	}
+
+	.countdown .clock-item {
+	}
+	.countdown em {
+		font-size: 500%;
+	}
+	.countdown span {
+		font-size: 100%;
 	}
 
 }
@@ -393,14 +422,18 @@ height: 500px;
 		display: none;
 	}
 
+	.countdown h3 {
+		font-size: 120%;
+	}
 	.countdown .clock-item {
-		width: 3.8em;
+		width: 4.5em;
+		margin: 0 0.3em;
 	}
 	.countdown em {
-		font-size: 400%;
+		font-size: 350%;
 	}
 	.countdown span {
-		font-size: 100%;
+		font-size: 70%;
 	}
 
 	.pics img {
@@ -424,6 +457,21 @@ height: 500px;
 		margin-top: 0.8em;
 	}
 
+	.venue p {
+		font-size: 100%;
+	}
+
+	.accommodation p {
+		font-size: 100%;
+	}
+
+
+	.share p {
+		font-size: 110%;
+	}
+	.share strong {
+		font-size: 130%;
+	}
 
 
 }
