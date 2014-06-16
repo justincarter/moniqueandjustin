@@ -310,6 +310,7 @@ h3 {
 
 .accommodation {
 	text-align: center;
+	padding: 0 0 2em 0;
 }
 
 .accommodation h2 {
@@ -320,7 +321,7 @@ h3 {
 }
 
 .accommodation .row {
-	margin: 1em 0 2em 0;
+	margin: 1em 0 0 0;
 }
 .accommodation .row div {
 	margin: 0 0 1em 0;
@@ -492,6 +493,9 @@ h3 {
 		font-size: 100%;
 	}
 
+	.accommodation .row strong {
+		font-size: 110%;
+	}
 
 	.share p {
 		font-size: 110%;
