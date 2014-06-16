@@ -309,16 +309,42 @@ h3 {
 
 
 .accommodation {
-height: 800px;
+	text-align: center;
 }
 
 .accommodation h2 {
 	color: #a11313;
 }
 .accommodation p {
-	font-size: 120%;
-	text-align: center;
+	font-size: 130%;
 }
+
+.accommodation .row {
+	margin: 1em 0 2em 0;
+}
+.accommodation .row div {
+	margin: 0 0 1em 0;
+}
+.accommodation .row img {
+	display: inline-block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 0.4em solid #b59759;
+	max-width: 100%;
+}
+
+.accommodation .row strong {
+	display: block;
+	margin: 0.5em 0 0.2em;
+	font-size: 140%;
+}
+.accommodation .row p {
+	display: block;
+	margin: 0.5em 0 0.2em;
+	font-size: 100%;
+}
+
 
 .share {
 	background: #323232 url(images/chalkboard-bg.jpg) 50% 50% no-repeat;
@@ -326,6 +352,7 @@ height: 800px;
 	color: #cdcdcd;
 	text-align: center;
 	padding-bottom: 2em;
+	border-bottom: 4em solid #b59759;
 }
 
 .share h2 {

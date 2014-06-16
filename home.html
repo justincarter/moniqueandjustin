@@ -23,10 +23,10 @@
 <div class="nav">
 	<div class="container">
 		<ul>
-			<li><a href="#timeline">Wedding Timeline</a></li>
-			<li><a href="#venue">The Arthouse</a></li>
-			<li><a href="#accommodation">Accommodation</a></li>
-			<li><a href="#share">Share the Love</a></li>
+			<li><a id="nav-timeline" href="#timeline">Wedding Timeline</a></li>
+			<li><a id="nav-venue" href="#venue">The Arthouse</a></li>
+			<li><a id="nav-accommodation" href="#accommodation">Accommodation</a></li>
+			<li><a id="nav-share" href="#share">Share the Love</a></li>
 		</ul>
 	</div>
 </div>
@@ -139,6 +139,50 @@
 	<div class="container">
 		<h2>Accommodation</h2>
 		<p>The venue for the wedding is right in the heart of Sydney's CBD so you really have a massive selection of hotels, apartments and even B&amp;B's. Here are some hotels that we can recommend but of course feel free to book wherever suits!</p>
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-1.png">
+				<p><strong>QT Hotel</strong>
+				This is where we are staying!</p>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-2.png">
+				<p><strong>The Hilton</strong>
+				Right next door to The Arthouse</p>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-3.png">
+				<p><strong>Hyde Park Inn</strong>
+				Short walk to the venue across from Hyde Park</p>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-4.png">
+				<p><strong>Swissotel</strong>
+				Across from QT Hotel next to Pitt St Mall</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-5.png">
+				<p><strong>Sydney City Lodge</strong>
+				Rennovated terrace in the city, nothing fancy but cheap and in a great location</p>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-6.png">
+				<p><strong>Meriton Serviced Apartments</strong>
+				Great chain of serviced apartments. There are several in the CBD</p>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-7.png">
+				<p><strong>Hotel Coronation</strong>
+				Cheap but nice rooms above a pub. Just around the corner from The Arthouse</p>
+			</div>
+			<div class="col-xs-6 col-sm-3 col-md-3">
+				<img src="css/images/accommodation-8.png">
+				<p><strong>Travelodge Sydney</strong>
+				About 1km from The Arthouse, cheap and clean and in a handy location</p>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -155,6 +199,7 @@
 </div>
 
 <script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/zepto.scroll.js"></script>
 <script type="text/javascript" src="js/moment.min.js"></script>
 <script type="text/javascript">
 	$(function(){
@@ -192,6 +237,16 @@
 			$("#clock-minutes").text(minutes);
 			$("#clock-seconds").text(seconds);
 		}
+
+		// scroll to anchors
+		$("a[href^='#']").on("click", function(e) {
+			var id = $(this).attr("href");
+			$.scrollTo({
+				endY: $(id).offset().top,
+				duration: 800
+			});
+			return false;
+		});
 
 	});
 </script>
